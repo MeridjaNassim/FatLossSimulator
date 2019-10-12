@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ResultsController">
+   <children>
+      <Label alignment="CENTER" layoutX="155.0" layoutY="14.0" prefHeight="60.0" prefWidth="291.0" text="Results" textFill="#dba62e">
+         <font>
+            <Font name="Helvetica" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="resultTable" layoutX="43.0" layoutY="74.0" prefHeight="323.0" prefWidth="515.0">
+        <columns>
+
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnReturn" buttonType="RAISED" layoutX="506.0" layoutY="32.0" ripplerFill="#ffd57b" style="-fx-background-color: dba62e;" text="return" textFill="WHITE" />
+   </children>
+</AnchorPane>

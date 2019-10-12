@@ -10,9 +10,9 @@ public class Test {
         System.out.println("Your BMR is : "+ nassim.get());
         TDEE tdee = new TDEE(nassim,ActivityLevel.MODERATLY_ACTIVE);
         System.out.println("your TDEE is : " + tdee.get());
-        FatLossSimulator simulator = new FatLossSimulator(180,0.227,500);
-        simulator.simulate(12);
-        Formatter.format("lbs",simulator.getLastResults());
+        FatLossSimulator simulator = new FatLossSimulator(176.36,0.201,250);
+        simulator.simulate(7);
+        Formatter.format("kg",simulator.getLastResults());
         simulator.log();
     }
 }

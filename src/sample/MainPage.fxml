@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="163.0" layoutY="14.0" prefHeight="50.0" prefWidth="283.0" text="Fat Loss Simulator" textFill="#dba62e">
+         <font>
+            <Font name="Helvetica" size="24.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="kg" layoutX="354.0" layoutY="121.0" text="Kilograms" textFill="WHITE" />
+      <JFXRadioButton fx:id="lbs" layoutX="461.0" layoutY="121.0" text="pounds" textFill="WHITE" />
+      <JFXTextField fx:id="weightText" focusColor="#dba62e" layoutX="163.0" layoutY="116.0" promptText="your weight" unFocusColor="WHITE">
+         <font>
+            <Font name="Helvetica" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="deficitText" focusColor="#dba62e" layoutX="163.0" layoutY="235.0" promptText="calories" unFocusColor="WHITE">
+         <font>
+            <Font name="Helvetica" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="bfText" focusColor="#dba62e" layoutX="163.0" layoutY="177.0" promptText="\%" unFocusColor="WHITE">
+         <font>
+            <Font name="Helvetica" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="weekText" focusColor="#dba62e" layoutX="163.0" layoutY="288.0" promptText="number" unFocusColor="WHITE">
+         <font>
+            <Font name="Helvetica" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSimulate" buttonType="RAISED" layoutX="195.0" layoutY="341.0" prefHeight="25.0" prefWidth="216.0" ripplerFill="#ffd57b" style="-fx-background-color: dba62e;" text="Simulate Fat Loss" textFill="#fffbfb" />
+      <Label layoutX="100.0" layoutY="119.0" text="Weight" textFill="#dba62e" />
+      <Label layoutX="100.0" layoutY="291.0" text="weeks" textFill="#dba62e" />
+      <Label layoutX="100.0" layoutY="238.0" text="deficit/day" textFill="#dba62e" />
+      <Label layoutX="100.0" layoutY="180.0" text="Body Fat" textFill="#dba62e" />
+   </children>
+</AnchorPane>

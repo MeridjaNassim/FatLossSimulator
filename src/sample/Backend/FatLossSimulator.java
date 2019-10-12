@@ -13,16 +13,39 @@ public class FatLossSimulator {
         this.initial_bodyfat = initial_bodyfat;
         this.deficit_perDay = deficit_perDay;
     }
+    public FatLossSimulator() {
+        this.initial_weightInLbs = 0;
+        this.initial_bodyfat = 0;
+        this.deficit_perDay = 0;
+    }
+
+    public void setDeficit_perDay(double deficit_perDay) {
+        this.deficit_perDay = deficit_perDay;
+    }
+
+    public void setInitial_bodyfat(double initial_bodyfat) {
+        this.initial_bodyfat = initial_bodyfat;
+    }
+
+    public void setInitial_weightInLbs(double initial_weightInLbs) {
+        this.initial_weightInLbs = initial_weightInLbs;
+    }
+
     public ArrayList<Result> simulate(int numberOfWeeks){
         double weight = initial_weightInLbs;
+        System.out.println("weight = " +weight);
         double bf = initial_bodyfat;
+        System.out.println("bf = " +bf);
         double deficit = deficit_perDay;
+        System.out.println("deficit = " +deficit);
         ArrayList<Result> results = new ArrayList<>();
         for (int i = 0; i <numberOfWeeks ; i++) {
             Result r= estimate(weight,bf,deficit);
             results.add(r);
             weight = r.getWeight();
+            System.out.println("weight = " +weight);
             bf = r.getBodyFat() ;
+            System.out.println("bf = " +bf);
         }
         lastResults =results;
         return results;
